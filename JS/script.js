@@ -1,27 +1,28 @@
 let inputCurrencyElement = document.querySelector(".js-inputCurrency");
 let resultElement = document.querySelector(".js-result");
 let formElement = document.querySelector(".js-form");
-let currencyIHaveElement = document.querySelector(".js-currencyIHave");
-let currencyNeededElement = document.querySelector(".js-currencyNeeded");
+let currencyFromElement = document.querySelector(".js-currencyFrom");
+let currencyToElement = document.querySelector(".js-currencyTo");
 const rate = 4.668;
+rateCurrency = 1 / rate;
 
-currencyIHaveElement.addEventListener("input", () => {
-    if (currencyIHaveElement.value === "EUR") {
-        currencyNeededElement.value = "PLN";
+currencyFromElement.addEventListener("input", () => {
+    if (currencyFromElement.value === "EUR") {
+        currencyToElement.value = "PLN";
         rateCurrency = 1 / rate;
     }
     else {
-        currencyNeededElement.value = "EUR";
+        currencyToElement.value = "EUR";
         rateCurrency = rate;
     }
 });
-currencyNeededElement.addEventListener("input", () => {
-    if (currencyNeededElement.value === "PLN") {
-        currencyIHaveElement.value = "EUR";
+currencyToElement.addEventListener("input", () => {
+    if (currencyToElement.value === "PLN") {
+        currencyFromElement.value = "EUR";
         rateCurrency = 1 / rate;
     }
     else {
-        currencyIHaveElement.value = "PLN";
+        currencyFromElement.value = "PLN";
         rateCurrency = rate;
     }
 });
@@ -29,6 +30,6 @@ currencyNeededElement.addEventListener("input", () => {
 formElement.addEventListener("submit", (even) => {
     even.preventDefault();
     let result = inputCurrencyElement.value * rateCurrency;
-    resultElement.innerHTML = `${inputCurrencyElement.value} ${currencyIHaveElement.value} = <strong> ${result.toFixed(2)} ${currencyNeededElement.value} </strong>`;
+    resultElement.innerHTML = `${inputCurrencyElement.value} ${currencyFromElement.value} = <strong> ${result.toFixed(2)} ${currencyToElement.value} </strong>`;
 }
 );
