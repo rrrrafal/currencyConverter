@@ -1,11 +1,11 @@
 # Currency Converter
-## demo 
+## Demo 
  url:    https://rrrrafal.github.io/currencyConverter/
 
 
  ![currencyConverter webside view](https://raw.githubusercontent.com/rrrrafal/currencyConverter/main/images/currencyConverter.jpg)
  
- ## destcription
+ ## Destcription
  
 This is a simple currency calculator. Converts currency from Euro to Polish zloty and vice versa. The rate used does not change with the actual rate.
 This converter can automatically replace currencies (if we select PLN in one selection, the other one changes automatically to EUR)
