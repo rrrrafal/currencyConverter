@@ -18,6 +18,7 @@ This converter can automatically replace currencies (if we select PLN in one sel
 ## How to use converter
 
 You need to fill in the first field correctly (maximum value is 9999999) 
+
 ![required value image](https://raw.githubusercontent.com/rrrrafal/currencyConverter/main/images/required%20value.jpg)
 
 and enter the value of the currency you want to convert:
