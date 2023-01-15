@@ -20,12 +20,12 @@
 }
 
 .form__labelText {
-    margin: 10px;
     width: 150px;
     display: inline-block;
 }
 
 .form__inputCurrency {
+    margin: 10px auto;
     border-radius: 5px;
     border: solid 1px #9c9c9c;
     padding: 5px;
@@ -34,6 +34,7 @@
 }
 
 .form__selectCurrency {
+    margin: 10px auto;
     border-radius: 5px;
     border: solid 1px #9c9c9c;
     padding: 5px;
