@@ -9,11 +9,12 @@ rateCurrency = 1 / rate;
 currencyFromElement.addEventListener("input", () => {
     if (currencyFromElement.value === "EUR") {
         currencyToElement.value = "PLN";
-        rateCurrency = 1 / rate;
+        rateCurrency = rate;
     }
     else {
         currencyToElement.value = "EUR";
-        rateCurrency = rate;
+        rateCurrency = 1 / rate;
+        
     }
 });
 currencyToElement.addEventListener("input", () => {
