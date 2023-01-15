@@ -20,9 +20,9 @@
 }
 
 .form__labelText {
+    margin: 10px;
     width: 150px;
     display: inline-block;
-    margin-right: 5px;
 }
 
 .form__inputCurrency {
