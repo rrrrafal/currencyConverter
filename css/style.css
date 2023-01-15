@@ -7,10 +7,10 @@ html {
 }
 
 .body {
+    margin: auto 20px;
     font-family: 'Lato', sans-serif;
     background-size: cover;
-    background-position: center;
-
+    background-position: top;
     background-image: url("../images/money.png");
     background-color: #f2f2f2;
 }
