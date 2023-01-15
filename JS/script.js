@@ -14,17 +14,17 @@ currencyFromElement.addEventListener("input", () => {
     else {
         currencyToElement.value = "EUR";
         rateCurrency = 1 / rate;
-        
+
     }
 });
 currencyToElement.addEventListener("input", () => {
     if (currencyToElement.value === "PLN") {
         currencyFromElement.value = "EUR";
-        rateCurrency = 1 / rate;
+        rateCurrency = rate;
     }
     else {
         currencyFromElement.value = "PLN";
-        rateCurrency = rate;
+        rateCurrency = 1 / rate;
     }
 });
 
