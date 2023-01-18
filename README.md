@@ -1,8 +1,8 @@
 # Currency Converter
 ## Demo 
+
  url:    https://rrrrafal.github.io/currencyConverter/
-
-
+ 
  ![currencyConverter webside view](https://raw.githubusercontent.com/rrrrafal/currencyConverter/main/images/currencyConverter.jpg)
  
  ## Destcription
@@ -11,10 +11,13 @@ This is a simple currency calculator. Converts currency from Euro to Polish zlot
 This converter can automatically replace currencies (if we select PLN in one selection, the other one changes automatically to EUR)
 
 ## Conventions used
+  
   - HTML
   - Java Script
   - BEM
   - CSS
+  - ES6+ Features
+  
 ## How to use converter
 
 You need to fill in the first field correctly (maximum value is 9999999) 
