@@ -1,8 +1,9 @@
-let inputCurrencyElement = document.querySelector(".js-inputCurrency");
-let resultElement = document.querySelector(".js-result");
-let formElement = document.querySelector(".js-form");
-let currencyFromElement = document.querySelector(".js-currencyFrom");
-let currencyToElement = document.querySelector(".js-currencyTo");
+{
+    const inputCurrencyElement = document.querySelector(".js-inputCurrency");
+const resultElement = document.querySelector(".js-result");
+const formElement = document.querySelector(".js-form");
+const currencyFromElement = document.querySelector(".js-currencyFrom");
+const currencyToElement = document.querySelector(".js-currencyTo");
 const rate = 4.668;
 rateCurrency = 1 / rate;
 
@@ -30,7 +31,8 @@ currencyToElement.addEventListener("input", () => {
 
 formElement.addEventListener("submit", (even) => {
     even.preventDefault();
-    let result = inputCurrencyElement.value * rateCurrency;
+    const result = inputCurrencyElement.value * rateCurrency;
     resultElement.innerHTML = `${inputCurrencyElement.value} ${currencyFromElement.value} = <strong> ${result.toFixed(2)} ${currencyToElement.value} </strong>`;
 }
 );
+}
