@@ -7,7 +7,7 @@
     const rate = 4.668;
     rateCurrency = 1 / rate;
 
-    currencyFromElement.addEventListener("input", () => {
+    const changeFromSelect = () => {
         if (currencyFromElement.value === "EUR") {
             currencyToElement.value = "PLN";
             rateCurrency = rate;
@@ -15,10 +15,10 @@
         else {
             currencyToElement.value = "EUR";
             rateCurrency = 1 / rate;
-
         }
-    });
-    currencyToElement.addEventListener("input", () => {
+    }
+
+    const changeToSelect = () => {
         if (currencyToElement.value === "PLN") {
             currencyFromElement.value = "EUR";
             rateCurrency = rate;
@@ -27,11 +27,14 @@
             currencyFromElement.value = "PLN";
             rateCurrency = 1 / rate;
         }
-    });
+    }
+
+    currencyFromElement.addEventListener("input", changeFromSelect);
+    currencyToElement.addEventListener("input", changeToSelect);
 
     formElement.addEventListener("submit", (even) => {
         even.preventDefault();
-        const result = inputCurrencyElement.value * rateCurrency;
+        let result = inputCurrencyElement.value * rateCurrency;
         resultElement.innerHTML = `${inputCurrencyElement.value} ${currencyFromElement.value} = <strong> ${result.toFixed(2)} ${currencyToElement.value} </strong>`;
     }
     );
