@@ -1,6 +1,5 @@
 {
     const inputCurrencyElement = document.querySelector(".js-inputCurrency");
-    const formElement = document.querySelector(".js-form");
     const currencyFromElement = document.querySelector(".js-currencyFrom");
     const currencyToElement = document.querySelector(".js-currencyTo");
     const rate = 4.668;
@@ -37,6 +36,7 @@
         updateResultText(inputCurrencyElement, currencyFromElement, currencyToElement, result);
     }
     const init = () => {
+        const formElement = document.querySelector(".js-form");
         formElement.addEventListener("submit", onFormSubmit);
         currencyFromElement.addEventListener("input", changeFromSelect);
         currencyToElement.addEventListener("input", changeToSelect);
