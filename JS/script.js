@@ -1,7 +1,5 @@
 {
     const inputCurrencyElement = document.querySelector(".js-inputCurrency");
-    const resultElement = document.querySelector(".js-result");
-    const formElement = document.querySelector(".js-form");
     const currencyFromElement = document.querySelector(".js-currencyFrom");
     const currencyToElement = document.querySelector(".js-currencyTo");
     const rate = 4.668;
@@ -28,14 +26,21 @@
             rateCurrency = 1 / rate;
         }
     }
-
-    currencyFromElement.addEventListener("input", changeFromSelect);
-    currencyToElement.addEventListener("input", changeToSelect);
-
-    formElement.addEventListener("submit", (even) => {
-        even.preventDefault();
-        let result = inputCurrencyElement.value * rateCurrency;
+    const updateResultText = (inputCurrencyElement, currencyFromElement, currencyToElement, result) => {
+        const resultElement = document.querySelector(".js-result");
         resultElement.innerHTML = `${inputCurrencyElement.value} ${currencyFromElement.value} = <strong> ${result.toFixed(2)} ${currencyToElement.value} </strong>`;
     }
-    );
+    const onFormSubmit = (even) => {
+        even.preventDefault();
+        const result = inputCurrencyElement.value * rateCurrency;
+        updateResultText(inputCurrencyElement, currencyFromElement, currencyToElement, result);
+    }
+    const init = () => {
+        formElement.addEventListener("submit", onFormSubmit);
+        currencyFromElement.addEventListener("input", changeFromSelect);
+        currencyToElement.addEventListener("input", changeToSelect);
+    }
+
+    init();
+
 }
